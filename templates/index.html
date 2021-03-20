@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titanic Survival Prediction</title>
+	<style>
+		input[type=text], input[type=number] {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+	border-radius: 4px;
+    
+    
+}
+td{
+	width: 40rem;
+}
+input[type=submit]{
+    width: 20%;
+    background-color: #ddd;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	margin-right: 15rem;
+	color: lavenderblush;
+	background-color: dodgerblue;
+	font-size: 2rem;
+}
+h1{
+
+	text-align: center;
+	font-size: 5rem;
+	background-color: rgb(255, 199, 209);
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2.5rem;
+	color: mintcream;
+}
+h3{
+
+
+text-align: center;
+font-size: 2rem;
+background-color: rgb(255, 199, 209);
+font-family: Arial, Helvetica, sans-serif;
+padding: 2.5rem;
+color: mintcream;
+
+}
+pre{
+	font-size: 2.3rem;
+	
+	color:dodgerblue;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+center{
+	margin-right:5rem ;
+}
+
+select{
+background-color: whitesmoke;
+  border: none;
+  color:dodgerblue;
+  padding: 15px 230px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+
+
+}
+p{
+	font-size:1.5rem;
+	
+	
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+		</style>
+
+</head>
+<body>
+	<div>
+	<h1>Titanic Survival Prediction</h1></div>
+	<center>
+	<img src="https://faithmag.com/sites/default/files/styles/article_full/public/2018-09/titanic2.jpg?h=6521bd5e&itok=H8td6QVv" width="400" height="400"></center>
+	<pre>							Enter Your Details:</pre>
+<table>
+<form method="POST" action="/">
+	<center>
+			<p>Name</p>
+	<input type ="text" name ="preg" placeholder="Name" >
+
+</center>
+	<tr>
+	
+<td>
+	<p>Age </p>
+	<input type ="text" name ="glucose" placeholder="Age"></td>
+
+	
+	<td><!--<input type ="text" name ="vary" placeholder=" Male (if yes enter 1 else enter 0)">-->
+		<p>Gender</p>
+		<select name= "vary" method="GET" action="/">
+			
+			<option value= "male" SELECTED>Male</option>
+			<option value= "female" SELECTED>Female</option>
+			<option SELECTED>Select </option>
+		  </select>
+	</td>
+</tr>
+<td>
+	<p>
+		Number of Parents/Children Aboard.
+	</p>
+	<br><input type ="text" name ="bldp" placeholder="Parch"></td>
+	
+	
+<td>
+	<p> Number of Siblings/Spouses Aboard</p>
+	<input type ="text" name ="skinth" placeholder="sibsip"></td></tr>
+	<br>
+	
+<tr><td>
+	<p>Fare</p>
+	<input type ="text" name ="insulin" placeholder="Fare"></td>
+	
+	<!--<input type ="text" name ="bmi" placeholder="HasCrCard (if yes select 1 else enter 0)">-->
+<td><p>Passenger class </p>
+	<select name= "bmi" method="GET" action="/">
+		
+		<option value= "1" SELECTED>1</option>
+		<option value= "2" SELECTED>2</option>
+		<option value= "3" SELECTED>3</option>
+		<option SELECTED>Select </option>
+	  </select>
+</td>
+</tr>
+	<br>
+	
+
+</table>
+<br><br>
+<center>	<input type="submit" ></center>
+
+</form>
+
+{% if predicted == '0' %}
+<h3><marquee direction = "left">Model Predicted that this Person didn't Survived  </marquee></h3>
+
+{% elif predicted == '1'  %}
+<h3><marquee direction = "left">Predicted as Positive for survival</marquee> </h3>
+
+{% endif %}
+</body>
+</html>
